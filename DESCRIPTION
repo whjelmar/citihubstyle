@@ -1,5 +1,5 @@
-Package: theme_citihub
-Title: MAKING GGPLOT GRAPHICS IN CITIHUB STYLE
+Package: citihubstyle
+Title: Making Ggplot Graphics In The Citihub Style
 Version: 0.1
 Authors@R: c(person("Walter", "Hjelmar", role = c("aut", "cre"),
     email = "walter.hjelmar@citihub.com", 
@@ -36,8 +36,8 @@ Suggests:
     vdiffr,
     withr
 License: GPL-3
-URL: http://github.com/whjelmar/theme_citihub
-BugReports: http://github.com/whjelmar/theme_citihub
+URL: http://github.com/whjelmar/citihubstyle
+BugReports: http://github.com/whjelmar/citihubstyle
 RoxygenNote: 6.1.1
 Encoding: UTF-8
 LazyData: true
