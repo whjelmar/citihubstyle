@@ -6,13 +6,38 @@ Authors@R: c(person("Walter", "Hjelmar", role = c("aut", "cre"),
     comment = "https://orcid.org/0000-0002-0625-2933"))
 Description: Helps create and export ggplot2 charts in the style used by 
     the Citihub data team based on the bbcplot module
+Depends:
+    R (>= 3.3.0)
 Imports:
-    ggplot2,
-    png,
+    ggplot2 (>= 3.0.0),
+    graphics,
     grid,
-    ggpubr,
+    methods,
+    purrr,
+    scales,
+    stringr,
+    tibble
+Suggests:
     dplyr,
-    data.table
+    covr,
+    extrafont,
+    glue,
+    knitr,
+    lattice,
+    lintr,
+    maps,
+    mapproj,
+    pander,
+    rlang,
+    rmarkdown,
+    spelling,    
+    testthat,
+    tidyr,
+    vdiffr,
+    withr
 License: GPL-3
+URL: http://github.com/whjelmar/theme_citihub
+BugReports: http://github.com/whjelmar/theme_citihub
+RoxygenNote: 6.1.1
 Encoding: UTF-8
 LazyData: true
