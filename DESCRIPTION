@@ -1,9 +1,9 @@
 Package: theme_citihub
 Title: MAKING GGPLOT GRAPHICS IN CITIHUB STYLE
-Version: 0.2
-Authors@R: c(
-    person("Walter", "Hjelmar", , "walter.hjelmar@citihub.com", c("aut", "cre")),
-    )
+Version: 0.1
+Authors@R: c(person("Walter", "Hjelmar", role = c("aut", "cre"),
+    email = "walter.hjelmar@citihub.com", 
+    comment = "https://orcid.org/0000-0002-0625-2933"))
 Description: Helps create and export ggplot2 charts in the style used by 
     the Citihub data team based on the bbcplot module
 Imports:
@@ -16,4 +16,3 @@ Imports:
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-
