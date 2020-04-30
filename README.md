@@ -3,8 +3,11 @@
 [![Code Coverage Status](https://codecov.io/gh/whjelmar/themes_citihub/branch/master/graph/badge.svg)](https://codecov.io/github/whjelmar/themes_citihub?branch=master)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/themes_citihub)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/themes_citihub)](http://cran.rstudio.com/web/packages/themes_citihub)
-[![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![lifecycle](https://img.shields.io/github/issues/whjelmar/theme_citihub)](https://img.shields.io/github/issues/whjelmar/theme_citihub)
 
+
+https://img.shields.io/github/issues/whjelmar/theme_citihub
 
 Some extra geoms, scales, and themes for
 [ggplot](http://ggplot2.org).
