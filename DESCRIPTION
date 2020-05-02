@@ -10,6 +10,7 @@ Depends:
     R (>= 3.3.0)
 Imports:
     ggplot2 (>= 3.0.0),
+    extrafont,
     graphics,
     grid,
     methods,
@@ -20,7 +21,6 @@ Imports:
 Suggests:
     dplyr,
     covr,
-    extrafont,
     glue,
     knitr,
     lattice,
