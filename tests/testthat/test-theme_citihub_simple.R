@@ -5,18 +5,14 @@ library(citihubstyle)
 context('theme_citihub() works with simple examples')
 
 test_that(
-  'theme_citihub can replicate a simple rug and point plot',
+  'theme_citihub can replicate a simple bar chart',
   {
-    p <- ggplot2::ggplot(
-      data = mtcars,
-      aes(
-        x = mpg,
-        y = wt
-      )
-    ) +
-      geom_point() +
+    p <- ggplot(mtcars, aes(x=cyl)) + 
+      geom_bar() + 
+      labs(title="Frequency bar chart") +
       theme_citihub()
+    
 
-    vdiffr::expect_doppelganger("simple rug and point plot", p)
+    vdiffr::expect_doppelganger("simple simple bar chart", p)
   }
 )
