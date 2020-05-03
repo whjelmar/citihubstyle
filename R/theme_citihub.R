@@ -21,29 +21,28 @@
 #' package \code{ggplot2}, will apply styling to a plot.
 #'
 #' @examples
-#'
-#'
+#' 
+#' 
 #' library(ggplot2)
 #' library(citihubstyle)
 #' library(dplyr)
-#'
+#' 
 #' p <- mtcars %>%
-#'    ggplot +
-#'    aes(
-#'    x = mpg,
-#'    y = wt
-#'    ) +
-#'    geom_point()
-#'
+#'   ggplot() +
+#'   aes(
+#'     x = mpg,
+#'     y = wt
+#'   ) +
+#'   geom_point()
+#' 
 #' # Plot without any theme applied
-#'
+#' 
 #' p
-#'
+#' 
 #' # Now apply citihub theme
-#'
+#' 
 #' p +
-#'  theme_citihub()
-#'
+#'   theme_citihub()
 #' @import ggplot2
 #' @import extrafont
 #' @export theme_citihub
@@ -51,94 +50,84 @@
 
 
 theme_citihub <- function(axes = "x") {
-  
-  base_size = 12
-  base_colour = "#033D55"
-  base_family = extrafont::choose_font(c('MrEavesXLModOT-Book', 'Lato','Raleway','Arial'))
-  
+  base_size <- 12
+  base_colour <- "#033D55"
+  base_family <- extrafont::choose_font(c("MrEavesXLModOT-Book", "Lato", "Raleway", "Arial"))
+
   gray <- "grey40"
   black <- "#000000"
-  if (!axes %in% c("n","x","y","xy")) {
-    
+  if (!axes %in% c("n", "x", "y", "xy")) {
     stop("axes must be one of 'n', 'x', 'y', or 'xy'")
-    
   }
-  
+
   ## Set x and y axis colour
-  
-  x_col = "white"
-  y_col = "white"
-  
+
+  x_col <- "white"
+  y_col <- "white"
+
   if (axes == "x") {
-    
-    x_col = base_colour
-    y_col = "white"
-    
+    x_col <- base_colour
+    y_col <- "white"
   }
-  
+
   if (axes == "y") {
-    
-    x_col = "white"
-    y_col = base_colour
-    
+    x_col <- "white"
+    y_col <- base_colour
   }
-  
+
   if (axes == "xy") {
-    
-    x_col = base_colour
-    y_col = base_colour
-    
+    x_col <- base_colour
+    y_col <- base_colour
   }
-  
+
   theme(
     legend.position = "none",
-    
+
     ## Adjust tick marks
-    
+
     axis.ticks = ggplot2::element_blank(),
-    #axis.ticks = element_line(colour = "gray40"),
-    #axis.ticks.y = element_blank(),
-    #axis.ticks.length = grid::unit( -2, "mm"),
-    
+    # axis.ticks = element_line(colour = "gray40"),
+    # axis.ticks.y = element_blank(),
+    # axis.ticks.length = grid::unit( -2, "mm"),
+
     ## Adjust the axis lines
-    
+
     axis.line = ggplot2::element_line(colour = base_colour),
     axis.line.x = ggplot2::element_line(colour = x_col),
     axis.line.y = ggplot2::element_line(colour = y_col),
-    
+
     ## Set the overall text attributes
-    
+
     text = ggplot2::element_text(
       face = "plain", colour = base_colour, size = base_size,
       hjust = 0.5, vjust = 0.5, angle = 0, lineheight = 0.8
     ),
     axis.text = ggplot2::element_text(colour = base_colour),
     plot.title = ggplot2::element_text(face = "bold", hjust = 1, colour = "black", vjust = -2.5),
-    
+
     ## Axis title attributes. Adjustments of
-    
+
     axis.title.y = ggplot2::element_text(hjust = 1, vjust = 1),
     axis.title.x = ggplot2::element_text(hjust = 1, vjust = 0),
-    
+
     ## Background attributes (currently all blank)
-    
+
     panel.background = ggplot2::element_blank(),
     panel.grid.major = ggplot2::element_blank(),
     panel.grid.minor = ggplot2::element_blank(),
-    
-    ##Adjust the margin around the plot. This is highly sensitive to plot, so
-    ##probably needs to be set on a plot by plot basis.
-    
-    #plot.margin = grid::unit(c(0,5,5,-30), "mm"),
-    
+
+    ## Adjust the margin around the plot. This is highly sensitive to plot, so
+    ## probably needs to be set on a plot by plot basis.
+
+    # plot.margin = grid::unit(c(0,5,5,-30), "mm"),
+
     ## Strip attributes for facet grid and facet wrap
-    
-    strip.background =   ggplot2::element_blank(),
-    strip.text =         ggplot2::element_text(color = "black", face = "bold", size = base_size + 1),
-    strip.text.x =       ggplot2::element_text(),
-    strip.text.y =       ggplot2::element_text(angle = -90),
-    
+
+    strip.background = ggplot2::element_blank(),
+    strip.text = ggplot2::element_text(color = "black", face = "bold", size = base_size + 1),
+    strip.text.x = ggplot2::element_text(),
+    strip.text.y = ggplot2::element_text(angle = -90),
+
     complete = FALSE
   )
 }
-
